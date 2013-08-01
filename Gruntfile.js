@@ -19,7 +19,12 @@ module.exports = function (grunt) {
     clean: {
       coverage: ['coverage', 'report/coverage'],
       report: ['report/complexity', 'report/api', 'report/docs'],
-      reportZip: ['report.zip']
+      reportZip: ['report.zip'],
+        vars: {
+          title: 'DalekJS - Documentation - Config',
+          desc: 'DalekJS - Documentation - Config',
+          docs: true
+        }
     },
 
     // linting
@@ -98,7 +103,12 @@ module.exports = function (grunt) {
       options: {
         header: 'dalekjs/dalekjs.com/master/assets/header.html',
         footer: 'dalekjs/dalekjs.com/master/assets/footer.html',
-        target: 'report/docs'
+        target: 'report/docs',
+        vars: {
+          title: 'DalekJS - Documentation - Config',
+          desc: 'DalekJS - Documentation - Config',
+          docs: true
+        }
       },
       src: ['index.js']
     },
